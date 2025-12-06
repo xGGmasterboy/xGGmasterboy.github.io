@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>xGGmasterboy | Faiz - Full-Stack Developer</title>
-  <meta name="description" content="Full-Stack Developer from Qatar | Discord Bots, Web Dev, Python, Design & Community"/>
+  <title>xGGmasterboy | xF4IZ</title>
+  
+  <!-- Favicon from your GitHub profile (shows in tab) -->
+  <link rel="icon" href="https://github.com/xGGmasterboy.png" type="image/png">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="18 y/o Full-Stack Developer from Qatar | Discord Bots, Web Dev, Python & Design"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -25,131 +29,198 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      padding: 40px 20px;
+      padding: 50px 20px;
       min-height: 100vh;
     }
-    .container { max-width: 1100px; margin: 0 auto; }
+    .container { max-width: 1200px; margin: 0 auto; }
 
-    header { text-align: center; margin-bottom: 50px; }
+    header { text-align: center; margin-bottom: 60px; }
     .avatar {
-      width: 140px; height: 140px;
+      width: 150px; height: 150px;
       border-radius: 50%;
-      border: 6px solid var(--red);
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(255,0,0,0.3);
+      border: 7px solid var(--red);
+      box-shadow: 0 0 30px rgba(255,0,0,0.4);
+      transition: transform 0.4s;
     }
-    h1 { font-size: 3.2rem; margin: 15px 0; color: var(--accent); }
-    .tagline { font-size: 1.4rem; color: var(--gray); max-width: 800px; margin: 0 auto; }
-
+    .avatar:hover { transform: scale(1.05); }
+    h1 {
+      font-size: 3.5rem;
+      margin: 20px 0 12px;
+      background: linear-gradient(90deg, var(--accent), #5d8cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+    .tagline {
+      font-size: 1.4rem;
+      color: var(--gray);
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
     .header-img {
       width: 100%;
       max-width: 1000px;
-      border-radius: 16px;
+      border-radius: 18px;
       margin: 40px auto;
       display: block;
-      border: 3px solid var(--accent);
+      border: 4px solid var(--accent);
+      box-shadow: 0 10px 30px rgba(52,80,150,0.3);
     }
 
     nav {
       text-align: center;
-      margin: 50px 0;
+      margin: 60px 0;
     }
     nav a {
       color: var(--text);
       text-decoration: none;
-      margin: 0 20px;
+      margin: 0 22px;
       font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 12px;
+      transition: all 0.3s;
     }
-    nav a:hover { color: var(--accent); }
-
-    .section { margin: 80px 0; }
-    h2 {
-      font-size: 2.2rem;
+    nav a:hover {
+      background: rgba(52,80,150,0.2);
       color: var(--accent);
+    }
+
+    .section { margin: 100px 0; }
+    h2 {
+      font-size: 2.6rem;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      color: var(--accent);
       position: relative;
+      font-weight: 700;
     }
     h2::after {
       content: '';
-      width: 80px;
-      height: 4px;
+      width: 100px;
+      height: 6px;
       background: var(--accent);
       display: block;
-      margin: 15px auto;
-      border-radius: 2px;
+      margin: 20px auto;
+      border-radius: 3px;
     }
 
-    .info-grid {
+    /* Fully responsive profile grid with beautiful icons */
+    .profile-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
       margin: 50px 0;
     }
-    .info-card {
+    .profile-item {
       background: var(--card);
-      padding: 30px;
-      border-radius: 16px;
+      padding: 32px 24px;
+      border-radius: 20px;
       border: 1px solid var(--border);
+      text-align: center;
+      transition: all 0.4s ease;
     }
-    .info-card h3 { color: var(--accent); margin-bottom: 15px; }
+    .profile-item:hover {
+      transform: translateY(-12px);
+      border-color: var(--accent);
+      box-shadow: 0 15px 40px rgba(52,80,150,0.3);
+    }
+    .profile-item i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 18px;
+      display: block;
+    }
+    .profile-item strong {
+      color: var(--accent);
+      font-size: 1.15rem;
+      display: block;
+      margin-bottom: 8px;
+    }
 
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin: 30px 0;
+      gap: 18px;
       justify-content: center;
+      margin: 50px 0;
     }
-    .tech { filter: grayscale(0); opacity: 0.9; transition: all 0.3s; }
-    .tech:hover { transform: scale(1.15); opacity: 1; }
+    .tech {
+      width: 56px;
+      height: 56px;
+      transition: all 0.4s;
+      filter: grayscale(30%);
+    }
+    .tech:hover {
+      transform: scale(1.25) rotate(8deg);
+      filter: grayscale(0%);
+    }
 
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 28px;
+      gap: 32px;
       margin-top: 40px;
     }
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      transition: all 0.3s;
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.4s ease;
     }
     .project-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-15px);
       border-color: var(--accent);
-      box-shadow: 0 10px 30px rgba(52, 80, 150, 0.2);
+      box-shadow: 0 20px 50px rgba(52,80,150,0.25);
     }
     .project-title {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
+      font-size: 1.6rem;
+      margin-bottom: 14px;
       color: var(--accent);
+      font-weight: 700;
     }
-    .project-desc { color: var(--gray); font-size: 1.05rem; }
+    .project-desc {
+      color: var(--gray);
+      font-size: 1.08rem;
+    }
+
+    .coming-soon {
+      text-align: center;
+      font-style: italic;
+      color: var(--accent);
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
 
     .social-badges {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
-      margin: 50px 0;
+      gap: 20px;
+      margin: 70px 0;
     }
 
     footer {
       text-align: center;
-      margin-top: 120px;
-      padding: 50px;
+      margin-top: 140px;
+      padding: 60px 20px;
       color: var(--gray);
       border-top: 1px solid var(--border);
+      font-size: 1rem;
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2.5rem; }
-      .header-img { margin: 30px 0; }
+      h1 { font-size: 2.8rem; }
+      .avatar { width: 120px; height: 120px; }
+      nav a { display: block; margin: 12px 0; }
+      .profile-grid { grid-template-columns: 1fr; }
+      .tech { width: 48px; height: 48px; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2.4rem; }
+      .header-img { border-radius: 12px; }
+      .profile-item { padding: 24px 16px; }
     }
   </style>
 </head>
@@ -160,7 +231,7 @@
       <img src="https://github.com/xGGmasterboy.png" alt="xGGmasterboy" class="avatar">
       <h1>Hello there, I'm Faiz!</h1>
       <p class="tagline">A versatile developer blending Code, Design and Community to build digital excellence.</p>
-      <img src="https://media.discordapp.net/attachments/1107563437002866758/1435195057924739103/GGs_Header_-_2.png?ex=690b150e&is=6909c38e&hm=a27899e390cdeb7c919537c99a7be97ae1a4fc168ba1b3b7e0e72ee4e9a1ea41&=&format=webp&quality=lossless&width=1062&height=197" alt="Header" class="header-img">
+      <img src="https://media.discordapp.net/attachments/1107563437002866758/1435195057924739103/GGs_Header_-_2.png?ex=690b150e&is=6909c38e&hm=a27899e390cdeb7c919537c99a7be97ae1a4fc168ba1b3b7e0e72ee4e9a1ea41&=&format=webp&quality=lossless&width=1062&height=197" alt="Header Banner" class="header-img">
     </header>
 
     <nav>
@@ -171,35 +242,44 @@
     </nav>
 
     <div class="section">
-      <h2>Core Expertise: Full-Stack Versatility</h2>
-      <p style="text-align:center; max-width:800px; margin:0 auto 40px; color:var(--gray);">
-        I operate at the intersection of development and design, specializing in solutions that are both functional and beautiful.
-      </p>
-
-      <div class="tech-stack">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="45" alt="python" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" height="45" alt="js" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="45" alt="ts" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="45" alt="react" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="45" alt="nextjs" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="nodejs" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" height="45" alt="discordjs" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="45" alt="figma" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" height="45" alt="ps" class="tech"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="45" alt="docker" class="tech"/>
+      <h2>Quick Profile Snapshot</h2>
+      <div class="profile-grid">
+        <div class="profile-item">
+          <i class="fas fa-birthday-cake"></i>
+          <strong>Age</strong><br>18–19 years old
+        </div>
+        <div class="profile-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <strong>Location</strong><br>Qatar
+        </div>
+        <div class="profile-item">
+          <i class="fas fa-user"></i>
+          <strong>Pronouns</strong><br>He/Him
+        </div>
+        <div class="profile-item">
+          <i class="fas fa-language"></i>
+          <strong>Languages</strong><br>English • Arabic • Urdu<br>Learning German
+        </div>
+        <div class="profile-item">
+          <i class="fas fa-heart"></i>
+          <strong>Interests</strong><br>Football • Gaming • Music • Anime<br>Volleyball • Developer & more...
+        </div>
       </div>
     </div>
 
     <div class="section">
-      <h2>Quick Profile Snapshot</h2>
-      <div class="info-grid">
-        <div class="info-card">
-          <p><strong>Age:</strong> 18/19</p>
-          <p><strong>Location:</strong> Qatar (He/Him)</p>
-          <p><strong>Languages:</strong> English, Arabic, Urdu → Learning German</p>
-          <p><strong>Community:</strong> Texas Academy Hub & Active Discord Developer</p>
-          <p><strong>Interests:</strong> Football, Gaming, Music, Anime</p>
-        </div>
+      <h2>Core Expertise & Toolkit</h2>
+      <div class="tech-stack">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="js" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="ts" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="nextjs" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" alt="discordjs" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="ps" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker" class="tech"/>
       </div>
     </div>
 
@@ -227,29 +307,30 @@
           <p class="project-desc">Contributed code fixes, new features, and ideas to Flxme's popular Discord bot.</p>
         </div>
       </div>
+      <p class="coming-soon">More public projects dropping soon — stay tuned!</p>
     </div>
 
     <div class="section">
-      <h2>Let's Connect & Collaborate!</h2>
+      <h2>Let's Connect!</h2>
       <div class="social-badges">
         <a href="https://x.com/GGmasterboys" target="_blank">
-          <img src="https://img.shields.io/static/v1?message=Twitch&logo=twitch&label=&color=9146FF&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitch"/>
+          <img src="https://img.shields.io/static/v1?message=Twitch&logo=twitch&label=&color=9146FF&logoColor=white&labelColor=&style=for-the-badge" height="42" alt="twitch"/>
         </a>
         <a href="https://discord.com/users/896682505279770727" target="_blank">
-          <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord"/>
+          <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="42" alt="discord"/>
         </a>
         <a href="https://youtube.com/@xggmasterboy" target="_blank">
-          <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube"/>
+          <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="42" alt="youtube"/>
         </a>
         <a href="mailto:xggmasterboy@gmail.com">
-          <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail"/>
+          <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="42" alt="gmail"/>
         </a>
       </div>
     </div>
 
     <footer>
-      © 2025 xGGmasterboy • Hosted on GitHub Pages • Built with passion in Qatar<br>
-      <small>No tracking • No cookies • Open source vibes</small>
+      © 2025 xGGmasterboy <br>
+      <small>No tracking • No cookies • 100% open source vibes</small>
     </footer>
   </div>
 
