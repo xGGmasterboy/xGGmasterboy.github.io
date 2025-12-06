@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>xfaiz | Developer & Builder</title>
+  <meta name="description" content="Full-stack developer, open-source enthusiast, and lifelong learner."/>
+
+  <!-- Favicon (optional – you can add later) -->
+  <link rel="icon" href="data:,">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --gray: #666;
+      --lightgray: #f5f5f5;
+      --accent: #2563eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --text: #e6edf3;
+        --gray: #8b949e;
+        --lightgray: #161b22;
+        --accent: #58a6ff;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 16px;
+      font-weight: 700;
+    }
+    p.subtitle {
+      font-size: 1.25rem;
+      color: var(--gray);
+      margin: 0;
+    }
+    nav {
+      margin: 40px 0;
+      text-align: center;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 16px;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 64px; }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+    ul.posts {
+      list-style: none;
+      padding: 0;
+    }
+    ul.posts li {
+      margin-bottom: 20px;
+    }
+    ul.posts a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+    ul.posts a:hover { color: var(--accent); }
+    .date {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 2.5rem; }
+      main { padding: 80px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1>xfaiz</h1>
+      <p class="subtitle">Full-Stack Developer • Open Source • Learning in Public</p>
+    </header>
+
+    <nav>
+      <a href="https://github.com/xfaiz" target="_blank">GitHub</a>
+      <a href="https://twitter.com/xfaiz" target="_blank">Twitter</a>
+      <a href="mailto:hi@xfaiz.com">Email</a>
+      <a href="/rss.xml">RSS</a>
+    </nav>
+
+    <section>
+      <h2>Latest Posts</h2>
+      <ul class="posts">
+        <li>
+          <a href="/2025/12/my-first-post.html">Building My Personal Site with GitHub Pages</a><br>
+          <span class="date">December 06, 2025</span>
+        </li>
+        <!-- Add more posts here later -->
+        <li>
+          <a href="#">Coming soon…</a><br>
+          <span class="date">Stay tuned</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        Hey! I'm Faiz — I build things on the web, love clean code, and share what I learn along the way.
+        Currently exploring Next.js, TypeScript, and system design.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 xfaiz • Built with GitHub Pages • No tracking, no cookies
+  </footer>
+
+</body>
+</html>
