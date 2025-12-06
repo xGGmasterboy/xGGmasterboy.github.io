@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>xGGmasterboy | Developer</title>
-  <meta name="description" content="Full-stack developer, open-source enthusiast, Linux lover."/>
+  <title>xGGmasterboy | Faiz - Full-Stack Developer</title>
+  <meta name="description" content="Full-Stack Developer from Qatar | Discord Bots, Web Dev, Python, Design & Community"/>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,36 +15,44 @@
       --card: #161b22;
       --text: #e6edf3;
       --gray: #8b949e;
-      --accent: #ff4d4d;
+      --accent: #345096;
       --border: #30363d;
+      --red: #ff0000;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       padding: 40px 20px;
       min-height: 100vh;
     }
     .container { max-width: 1100px; margin: 0 auto; }
 
-    header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
+    header { text-align: center; margin-bottom: 50px; }
     .avatar {
-      width: 120px; height: 120px;
+      width: 140px; height: 140px;
       border-radius: 50%;
-      border: 4px solid var(--accent);
+      border: 6px solid var(--red);
       margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
     }
-    h1 { font-size: 3rem; margin: 10px 0; }
-    .tagline { color: var(--gray); font-size: 1.3rem; }
+    h1 { font-size: 3.2rem; margin: 15px 0; color: var(--accent); }
+    .tagline { font-size: 1.4rem; color: var(--gray); max-width: 800px; margin: 0 auto; }
+
+    .header-img {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 16px;
+      margin: 40px auto;
+      display: block;
+      border: 3px solid var(--accent);
+    }
 
     nav {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0;
     }
     nav a {
       color: var(--text);
@@ -52,92 +60,96 @@
       margin: 0 20px;
       font-weight: 600;
       font-size: 1.1rem;
-      transition: color 0.2s;
+      transition: color 0.3s;
     }
     nav a:hover { color: var(--accent); }
 
-    .profile-info {
+    .section { margin: 80px 0; }
+    h2 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .info-card {
       background: var(--card);
       padding: 30px;
       border-radius: 16px;
       border: 1px solid var(--border);
-      margin-bottom: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
     }
-    .info-left { flex: 1; min-width: 300px; }
-    .info-item {
-      margin: 15px 0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .info-item i { color: var(--accent); width: 20px; }
+    .info-card h3 { color: var(--accent); margin-bottom: 15px; }
 
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 20px;
+      margin: 30px 0;
+      justify-content: center;
     }
-    .tech {
-      background: var(--accent);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
+    .tech { filter: grayscale(0); opacity: 0.9; transition: all 0.3s; }
+    .tech:hover { transform: scale(1.15); opacity: 1; }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
     }
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 24px;
-      transition: transform 0.2s;
+      padding: 28px;
+      transition: all 0.3s;
     }
-    .project-card:hover { transform: translateY(-8px); }
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px rgba(52, 80, 150, 0.2);
+    }
     .project-title {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 12px;
       color: var(--accent);
     }
-    .project-desc { font-size: 1rem; color: var(--gray); margin-bottom: 16px; }
-    .project-meta {
+    .project-desc { color: var(--gray); font-size: 1.05rem; }
+
+    .social-badges {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.9rem;
-      color: var(--gray);
-    }
-    .btn {
-      background: var(--accent);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 50px 0;
     }
 
     footer {
       text-align: center;
-      margin-top: 100px;
-      padding: 40px;
+      margin-top: 120px;
+      padding: 50px;
       color: var(--gray);
-      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
-      .profile-info { flex-direction: column; text-align: center; }
-      h1 { font-size: 2.4rem; }
+      h1 { font-size: 2.5rem; }
+      .header-img { margin: 30px 0; }
     }
   </style>
 </head>
@@ -146,74 +158,98 @@
   <div class="container">
     <header>
       <img src="https://github.com/xGGmasterboy.png" alt="xGGmasterboy" class="avatar">
-      <h1>xGGmasterboy</h1>
-      <p class="tagline">Full-Stack Developer • Linux Enthusiast • Open Source</p>
+      <h1>Hello there, I'm Faiz!</h1>
+      <p class="tagline">A versatile developer blending Code, Design and Community to build digital excellence.</p>
+      <img src="https://media.discordapp.net/attachments/1107563437002866758/1435195057924739103/GGs_Header_-_2.png?ex=690b150e&is=6909c38e&hm=a27899e390cdeb7c919537c99a7be97ae1a4fc168ba1b3b7e0e72ee4e9a1ea41&=&format=webp&quality=lossless&width=1062&height=197" alt="Header" class="header-img">
     </header>
 
     <nav>
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
-      <a href="https://x.com/xGGmasterboy" target="_blank">Twitter</a>
-      <a href="https://discord.gg/yourserver" target="_blank">Discord</a>
+      <a href="#about">About</a>
+      <a href="mailto:xggmasterboy@gmail.com">Contact</a>
     </nav>
 
-    <div class="profile-info">
-      <div class="info-left">
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Based in: Pakistan</span>
-        </div>
-        <div class="info-item">
-          <i class="fab fa-github"></i>
-          <span>GitHub: <a href="https://github.com/xGGmasterboy" style="color:var(--accent)">xGGmasterboy</a></span>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <span>Email: your.email@gmail.com</span>
-        </div>
+    <div class="section">
+      <h2>Core Expertise: Full-Stack Versatility</h2>
+      <p style="text-align:center; max-width:800px; margin:0 auto 40px; color:var(--gray);">
+        I operate at the intersection of development and design, specializing in solutions that are both functional and beautiful.
+      </p>
 
-        <div class="tech-stack">
-          <span class="tech">Python</span>
-          <span class="tech">JavaScript</span>
-          <span class="tech">Node.js</span>
-          <span class="tech">React</span>
-          <span class="tech">Linux</span>
-          <span class="tech">Docker</span>
+      <div class="tech-stack">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="45" alt="python" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" height="45" alt="js" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="45" alt="ts" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="45" alt="react" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="45" alt="nextjs" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="nodejs" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" height="45" alt="discordjs" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="45" alt="figma" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" height="45" alt="ps" class="tech"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="45" alt="docker" class="tech"/>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Quick Profile Snapshot</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <p><strong>Age:</strong> 18/19</p>
+          <p><strong>Location:</strong> Qatar (He/Him)</p>
+          <p><strong>Languages:</strong> English, Arabic, Urdu → Learning German</p>
+          <p><strong>Community:</strong> Texas Academy Hub & Active Discord Developer</p>
+          <p><strong>Interests:</strong> Football, Gaming, Music, Anime</p>
         </div>
       </div>
     </div>
 
-    <h2 style="font-size:2rem; margin:60px 0 30px; color:var(--accent); text-align:center;">Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <div class="project-title">Discord All-In-One Tool</div>
-        <p class="project-desc">Powerful Discord selfbot with raiding, token tools, and more. Feature-rich and constantly updated.</p>
-        <div class="project-meta">
-          <span>⭐ 1.2k • Python</span>
-          <a href="https://github.com/xGGmasterboy/discord-tool" class="btn" target="_blank">View on GitHub</a>
+    <div class="section">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <div class="project-title">Waldo Discord Bot</div>
+          <p class="project-desc">All-in-one Discord bot under active development — will be completely free for everyone who can't afford premium bots.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-title">EH/HUB</div>
+          <p class="project-desc">Dedicated bot for Roblox Emergency Hamburg — activity checks, top gangs, server stats, and more.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Discord Server Creation & Design</div>
+          <p class="project-desc">Professional server setups with roles, channels, categories, v14 components — tailored for YouTubers and server shops.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Discord Setup Bot</div>
+          <p class="project-desc">Fully automated bot that configures roles, rules, embeds, channels, and categories with one command.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Flxme's Bot</div>
+          <p class="project-desc">Contributed code fixes, new features, and ideas to Flxme's popular Discord bot.</p>
         </div>
       </div>
+    </div>
 
-      <div class="project-card">
-        <div class="project-title">Advanced Token Grabber</div>
-        <p class="project-desc">Next-gen Discord token logger with anti-detection and webhook delivery.</p>
-        <div class="project-meta">
-          <span>⭐ 890 • Python</span>
-          <a href="#" class="btn">Private Repo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-title">Website Coming Soon</div>
-        <p class="project-desc">More public projects dropping soon — stay tuned!</p>
-        <div class="project-meta">
-          <span>More incoming...</span>
-        </div>
+    <div class="section">
+      <h2>Let's Connect & Collaborate!</h2>
+      <div class="social-badges">
+        <a href="https://x.com/GGmasterboys" target="_blank">
+          <img src="https://img.shields.io/static/v1?message=Twitch&logo=twitch&label=&color=9146FF&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitch"/>
+        </a>
+        <a href="https://discord.com/users/896682505279770727" target="_blank">
+          <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord"/>
+        </a>
+        <a href="https://youtube.com/@xggmasterboy" target="_blank">
+          <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube"/>
+        </a>
+        <a href="mailto:xggmasterboy@gmail.com">
+          <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail"/>
+        </a>
       </div>
     </div>
 
     <footer>
-      © 2025 xGGmasterboy • Built with GitHub Pages • No cookies, no tracking
+      © 2025 xGGmasterboy • Hosted on GitHub Pages • Built with passion in Qatar<br>
+      <small>No tracking • No cookies • Open source vibes</small>
     </footer>
   </div>
 
