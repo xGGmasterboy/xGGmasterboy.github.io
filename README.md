@@ -17,7 +17,7 @@ Passionate about building powerful tools, automation, and clean code.
 
 ### 📫 Contact
 - Discord: `@xggmasterboy` (or join my server)
-- Twitter/X: [@xGGmasterboy](https://x.com/xGGmasterboy)
-- Email: your.email@gmail.com
+- Twitter/X: [@xGGmasterboy](https://x.com/Skryvon)
+- Email: xskryvon@gmail.com
 
 > This site is hosted 100% free with GitHub Pages ⚡
